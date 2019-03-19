@@ -1,0 +1,22 @@
+.reveal .black,
+.reveal .black h1,
+.reveal .black h2,
+.reveal .black h3,
+.reveal .black h4,
+.reveal .black h5,
+.reveal .black p {
+  color: #333;
+}
+
+.reveal .two-sides {
+  display: flex;
+}
+
+.reveal .left-side,
+.reveal .right-side {
+  width: 50%;
+}
+
+.reveal .small {
+  font-size: 50%;
+}
