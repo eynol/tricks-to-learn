@@ -8,7 +8,8 @@
     />
 
     <title>Tricks to learn</title>
-
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <meta name="theme-color" content="#1e2327" />
     <link rel="stylesheet" href="css/reveal.css" />
     <link rel="stylesheet" href="css/theme/black.css" />
 
@@ -31,10 +32,10 @@
     <div class="reveal">
       <div class="slides">
         <section>
-          <h1>学习的一些技巧</h1>
+          <h1>关于学习的一些技巧</h1>
         </section>
         <section>
-          <p>探索 & 未知 & 冒险</p>
+          <img src="img/studying.gif" />
         </section>
         <section data-transition="fade">
           <ul>
@@ -58,15 +59,24 @@
             <h1>compare</h1>
           </section>
           <section>
+            <p>改变一个条件后，比较前后的区别</p>
+          </section>
+          <section>
             <h3>CSS 属性</h3>
-            <pre><code class="hljs lang-css" data-trim contenteditable>
-			position: sticky;
-			top: 30px;
-			</code></pre>
-            <pre><code  class="hljs lang-css" data-trim contenteditable>
-			position: fixed;
-			top: 30px;
-			</code></pre>
+            <div class="two-sides">
+              <div class="left-side">
+                <pre><code class="hljs lang-css" data-trim contenteditable>
+                  position: sticky;
+                  top: 30px;
+                  </code></pre>
+              </div>
+              <div class="right-side">
+                <pre><code  class="hljs lang-css" data-trim contenteditable>
+                  position: fixed;
+                  top: 30px;
+                  </code></pre>
+              </div>
+            </div>
             改变属性值，然后比较变更前后的变化。
           </section>
           <section>
@@ -99,6 +109,30 @@
             # 控制变量法
             控制变量法是指把多因素的问题变成多个单因素的问题，而只改变其中的某一个因素，从而研究这个因素对事物影响。
           </section>
+          <section data-markdown>
+            # 如何查找webpack打包构建过程中的错误？
+          </section>
+          <section>
+            <ul>
+              <li>慢慢删减要打包的代码, 定位和问题相关的代码</li>
+              <li class="fragment">删减插件，定位和问题相关的插件</li>
+              <li class="fragment">修改依赖的版本，定位问题相关的第三方依赖</li>
+              <li class="fragment">
+                切换到其他系统测试，定位问题相关的系统环境
+              </li>
+            </ul>
+          </section>
+          <section>
+            <p>
+              学习webpack，从最小化的配置文件开始慢慢增加新功能，比较前后有什么变化
+            </p>
+          </section>
+          <section>
+            <ul>
+              <li>&lt;script crossOrigin="anonymous" src="" &gt;&lt;/script&gt;</li>
+              <li class="fragment">esModuleInterop: true</li>
+            </ul>
+          </section>
           <section class="black" data-background="#f4f4f4">
             <h1>Git bisect</h1>
             <img
@@ -122,10 +156,55 @@
             <p>Do you get it?</p>
           </section>
           <section>
-            用自己理解把东东再讲给别人，让别人也能够理解。
+            <p>请描述你在浏览器搜索框里按下回车键后，发生了哪些事情？</p>
+            <p class="fragment">请描述 指针 和 引用 有什么区别？</p>
+            <p class="fragment">
+              什么是赛博朋克？<span class="fragment">蒸汽朋克?</span>
+            </p>
+            <p class="fragment">你希望自己生日那天发生什么？</p>
+          </section>
+          <section>
+            <h1>无需使用搜索引擎或书籍或笔记就能解释</h1>
+            <p class="fragment">
+              如果像初中背书一样死记硬背，你现在还记得初中课本里要背诵的那段内容吗？
+            </p>
+          </section>
+          <section>
+            <p>
+              就像三观一样，内化理解是私事，别人的还是别人的，只有自己理解了才是自己的
+            </p>
+          </section>
+          <section data-background="#eee">
+            <p>你能理解以下内容吗？</p>
+          </section>
+          <section data-background="#eee">
+            <img
+              style="object-fit:contain"
+              width="500"
+              data-src="img/marionette.png"
+            />
+            <p>
+              木偶是react组件，连接线是connect；store里的数据，通过线输出给木偶
+            </p>
+          </section>
+          <section data-background="#eee">
+            <p>
+              “印刷品出血”意思就是你做出的图要比最终出图要大一些,一般上、下、左、右各多出3mm,裁切的时候保证你想要表达的东西不会被切掉。
+            </p>
+          </section>
+          <section data-background="#eee">
+            <iframe
+              src="https://wiki.archlinux.org/index.php/Installation_guide_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)"
+              width="100%"
+              height="600"
+              allowfullscreen
+            ></iframe>
           </section>
           <section>
             指针 和 引用的区别
+          </section>
+          <section>
+            <img src="img/ram.png" />
           </section>
           <section>
             <div class="two-sides">
@@ -136,6 +215,22 @@
                 <img data-src="img/pointer2.png" />
               </div>
             </div>
+            <p>
+              变量名称 值 <span class="fragment">内存地址</span>
+              <span class="fragment">引用类型</span>
+              <span class="fragment">指针类型</span>
+            </p>
+          </section>
+          <section>
+            <p class="fragment">
+              变量名称i指向一个内存地址addr，内存地址上的值是数字1。从变量i那里我们只能拿到数字1。
+            </p>
+            <p class="fragment">
+              指针类型p的值是内存地址addr，内存地址addr上的值是数字1。从变量p那里我们拿到内存地址addr，也能够拿到数字1。
+            </p>
+            <p class="fragment">
+              引用类型r的值是内存地址addr，内存地址addr上的值是数字1。从变量r那里我们不能操作内存地址addr，但能够拿到数字1。
+            </p>
           </section>
           <section>
             <pre><code  class="hljs lang-js" data-trim contenteditable>
@@ -270,7 +365,7 @@
           </section>
           <section>
             <pre><code class="hljs lang-js"  data-trim>
-              var ws = new WebSocket("wss://echo.websocket.org");
+              var ws = new WebSocket("wss://echo.websocket.org:8080");
               
               ws.onopen = function(evt) { 
                 console.log("Connection open ..."); 
@@ -332,9 +427,9 @@
             <h1>Abstraction</h1>
           </section>
           <section>
-            <p>将一个东东或者流程 赋值 给一个变量名</p>
             <p class="fragment">动物 = ??</p>
             <p class="fragment">猫 = ??</p>
+            <p class="fragment">给一个名词下一个定义</p>
           </section>
           <section>
             <h1>流的概念</h1>
@@ -362,11 +457,30 @@
             </code></pre>
           </section>
           <section>
-            <p>Rx.js</p>
+            <p style="text-align:left; line-height:1.7">
+              Rx.js采用订阅者模式，把 <span class="sp1">事件</span> 用
+              <span class="sp1">流</span>
+              的形式来处理。通常来讲，处理事件的逻辑<span class="sp1">订阅</span
+              >了某个事件的输出口，这个输出口就像socket的输出口一样。事件的产生者把数据<span
+                class="sp1"
+                >写入这个“流”</span
+              >，如果事件不停止，那就不停地写入到这个“流当中”。
+            </p>
+          </section>
+          <section>
+            <div style="height:600px;overflow: auto;">
+              <script src="https://gist.github.com/PCreations/99765f48b1f60c9427c479c25f3e3bbd.js"></script>
+            </div>
           </section>
           <section>
             <h1>管道的概念</h1>
             <h1>pipe</h1>
+          </section>
+          <section>
+            <img src="img/pipe.png" />
+          </section>
+          <section>
+            <p>ls | head -3 | tail -1</p>
           </section>
           <section>
             <h1>数组的概念</h1>
@@ -381,6 +495,12 @@
             <p>String, Byte</p>
           </section>
           <section>
+            <p>"POST /examples/default.jsp HTTP/1.1"</p>
+            <p> [80, 79, 83, 84, 32, 47, 101, 120, 97, 109, 112, 108, 101, 115, 47, 100, 101, 102, 97, 117, 108, 116, 46, 106, 115, 112, 32, 72, 84, 84, 80, 47, 49, 46, 49]</p>
+            <p>[1010000, 1001111, ...]</p>
+          </section>
+          <section>抽象是一层一层往上的，如果不必了解细节，可以直接把抽象的东西当作黑盒理解。</section>
+          <section>
             <ul>
               <li>Promise</li>
               <li>Generator</li>
@@ -390,7 +510,8 @@
               <li>HTML Node / Element</li>
             </ul>
           </section>
-          <section>
+          <section data-background="#eee">对规律的总结形成自己对某个知识的抽象</section>
+          <section data-background="#eee">
             <h1>IPO</h1>
             <p>Input Process Output</p>
             <img
@@ -399,7 +520,19 @@
               data-src="img/input_process_output.jpg"
             />
           </section>
-          <section>
+          <section data-background="#eee">(input) => output</section>
+          <section data-background="#eee">
+            <p>View = f(state)</p>
+          </section>
+          <section data-background="#eee">
+            <p>Redux Connect</p>
+            <img
+              style="object-fit:contain"
+              width="500"
+              data-src="img/marionette.png"
+            />
+          </section>
+          <section data-background="#eee">
             <iframe
               width="100%"
               height="600"
@@ -417,6 +550,48 @@
               >
             </p>
           </section>
+          <section>
+            <p>React 17 new lifecycle</p>
+            <div class="two-sides">
+              <div class="left-side">
+                <pre><code class="hljs lang-jsx"  data-trim>
+                  componentWillReceiveProps(nextProps: SiderProps) {
+                    if ('collapsed' in nextProps) {
+                      this.setState({
+                        collapsed: nextProps.collapsed,
+                      });
+                    }
+                  }
+              </code></pre>
+              </div>
+              <div class="right-side">
+                <pre><code class="hljs lang-jsx"  data-trim>
+                  static getDerivedStateFromProps(nextProps: SiderProps, prevState: SiderState) {
+                    if (
+                      "collapsed" in nextProps &&
+                      nextProps.collapsed !== prevState.prevCollapsed
+                    ) {
+                      return {
+                        prevCollapsed: nextProps.collapsed,
+                        collapsed: nextProps.collapsed
+                      };
+                    }
+                    return null;
+                  }
+              </code></pre>
+              </div>
+            </div>
+            <p>
+              <span class="fragment">static</span>
+              <span class="fragment">nextProps</span>
+              <span class="fragment">currentState</span>
+            </p>
+          </section>
+          <section>
+            <p>计算出新 state</p>
+            <p>static (props, state) => $new_state</p>
+            <p>$Y = f(X, Y)</p>
+          </section>
         </section>
         <section data-background-transition="slide">
           <section data-background="">
@@ -424,12 +599,35 @@
             <h1>graph</h1>
           </section>
           <section>
+            <p>
+              文字是逻辑描述，图像可以直观表达，简化描述。降低理解难度，图像是对文字的抽象。
+            </p>
+          </section>
+          <section>
             <h1>画草图</h1>
             <p>无论是在草稿纸上还是电脑建模软件，都可以画草图来整理思路</p>
           </section>
           <section>
+            <h1>思维导图</h1>
+            <p>梳理想法idea</p>
+          </section>
+          <section>
             <h1>UML统一建模语言</h1>
             <p>使用标准规范的图形和含义来描述系统的结构</p>
+          </section>
+          <section>
+            <h1>表格图表</h1>
+            <p>记录二维数据，三维数据，或者作为数据库来使用</p>
+          </section>
+          <section>
+            <img
+              src="https://github.com/eynol/hitokoto-pwa/raw/master/diagram-hitokotoDriver.jpg"
+              alt=""
+            />
+            <a
+              href="https://github.com/eynol/hitokoto-pwa/blob/master/diagram-hitokotoDriver.jpg"
+              >diagram-hitokotoDriver.jpg</a
+            >
           </section>
           <section data-transition="fade">
             <div class="two-sides">
@@ -455,16 +653,32 @@
               </div>
             </div>
           </section>
-          <section data-transition="fade">
+          <section data-transition="fade" data-background="#eee">
             <img src="img/socket-demo.png" alt="" />
           </section>
-          <section data-transition="fade">
+          <section data-transition="fade" data-background="#eee">
             <img src="img/socket-layer.jpg" alt="" />
           </section>
-          <section data-transition="fade">
+          <section data-transition="fade" data-background="#eee">
             <img src="img/websocket_sequence.png" alt="" />
           </section>
+          <section data-background="#eee">
+            <img src="img/react-redux.png" alt="" />
+            <img src="img/streams.png" alt="" />
+          </section>
           <section>
+            <a href="https://zhuanlan.zhihu.com/p/53789440">草图就是要如此津津有味！</a>
+            <a href="https://www.zhihu.com/question/23569835/answer/121585709"
+              >UML还有用吗？</a
+            >
+            <a href="https://www.zhihu.com/question/20273625/answer/567059935"
+              >思维导图真的有效吗？</a
+            >
+            <a href="https://www.zhihu.com/question/26619945/answer/414704113"
+              >Excel 有什么神奇用途？</a
+            >
+          </section>
+          <section data-background="#eee">
             <p>
               <a
                 class="small"
@@ -479,26 +693,85 @@
             <h1>类比</h1>
             <h1>analogy</h1>
           </section>
+          <section>
+            <img src="img/duckTyping.jpg" alt="" srcset="" />
+          </section>
+          <section>
+            <h1>鸭子模型</h1>
+            <p>
+              当看到一只鸟走起来像鸭子、游泳起来像鸭子、叫起来也像鸭子，那么这只鸟就可以被称为鸭子。
+            </p>
+          </section>
+          <section>
+            <p>WebSocket 就相当于 Socket</p>
+            <ul>
+              <li class="fragment">
+                输入端可以持续的往管道里写内容，写入什么内容，输出端读出相同的内容
+              </li>
+              <li class="fragment">
+                输出端采用“监听”的方式一直standby，直到这个连接关闭（close）
+              </li>
+            </ul>
+          </section>
+          <section>
+            <img src="img/obseverSubscribe.jpg" />
+            <p>观察者模式和订阅者模式的区别</p>
+          </section>
+          <section>
+            <p>A ≈ B</p>
+          </section>
+          <section>
+            <div>
+              <pre><code data-trim lang="lang-vue">
+                  Vue.component('todo-item', {
+                    // todo-item 组件现在接受一个
+                    // "prop"，类似于一个自定义特性。
+                    // 这个 prop 名为 todo。
+                    props: ['todo'],
+                    template: '&lt;li>{{ todo.text }}&lt;/li>'
+                  })
+                </code></pre>
+            </div>
+            <div>
+              <pre><code data-trim lang="lang-jsx">
+                  function TotoItem(props){
+                    return <li>{props.todo.text}</li>
+                  }
+                </code></pre>
+            </div>
+            <p>Vue里的props相当于react里的props</p>
+          </section>
+          <section>
+            <iframe width="100%" height="600" src="https://flutter.dev/docs/get-started/flutter-for/web-devs"></iframe>
+          </section>
+          <section>
+            <p>需要注意的是，尽管可以用同一个概念或者抽象去看待两个可以类比的东西，两者本质上是不同的，只是学习上可以通过类比简化理解</p>
+          </section>
         </section>
         <section>
           <section>
             <h1>记忆力</h1>
             <p>
-              如果发现自己总是经常忘记，那就是没有理解，理解就相当于建立突触的过程
+              如果发现自己总是经常忘记，那就是没有理解。
+            </p>
+            <p>
+              如果记忆力很重要，可以去学习一些特殊的记忆技巧。
             </p>
           </section>
           <section>
-            <h3>理解在先，记住不是重要的</h3>
+            <h3>理解在先，背诵不是重要的</h3>
             <p>
-              不要死记硬背，而是先自己理解了后记住自己理解的那个东西，可以用的时候查
+              不要死记硬背，而是先自己理解了后记住自己理解的那个东西，可以用的时候查.
             </p>
           </section>
           <section>
             <p>
               睡眠有助于记忆，第一天搞不懂，第二天再试试。
             </p>
-            <p class="fragment slide">
-              身体也会有肌肉记忆。
+          </section>
+          <section>
+            <p>
+              身体会有肌肉记忆，学习新的运动，第一天和第二天的感觉是不一样的。
             </p>
           </section>
           <section>
@@ -509,6 +782,122 @@
               <li class="fragment">JS - Array.splice</li>
             </ul>
           </section>
+          <section>
+            <h1>图像记忆</h1>
+            <ul>
+              <li>React生命周期图</li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h1>反馈</h1>
+            <p>扔个石头到黑暗的井里，6秒钟后，听到响声，请问井有多深？</p>
+            <p class="fragment">一入前端深似海</p>
+          </section>
+          <section>
+            反馈是普遍规律，比如市场推广如果没有客户反馈，就不知道产品哪里好，哪里不好，哪些地方需要改进。
+          </section>
+          <section>
+            <p class="text">
+              年过半百的C++老师说，他以前学C++的时候，电脑很贵，都是在纸上写代码，觉得自己都懂了，<span
+                class="sp1"
+                >根本不需要老师</span
+              >。
+            </p>
+            <img src="img/mannaozidoushisaocaozuo.gif" />
+            <p class="text">
+              后来去机房敲代码，才发现和自己脑子里想的差了十万八千里。
+            </p>
+          </section>
+          <section>
+            <p>反馈周期 是 从修改代码到验证期望值是否正确的过程花费的时间</p>
+          </section>
+          <section>
+            <ol>
+              <li>编写源代码</li>
+              <li class="fragment">按F8键编译代码</li>
+              <li class="fragment">查看输出或者断点位置的情况</li>
+            </ol>
+          </section>
+          <section>
+            <ol>
+              <li>热更新</li>
+              <li class="fragment">测试驱动开发</li>
+              <li class="fragment">持续集成构建系统</li>
+            </ol>
+          </section>
+          <section>为什么要热更新？</section>
+          <section>
+            <iframe
+              src="https://player.vimeo.com/video/36579366"
+              width="640"
+              height="360"
+              frameborder="0"
+              webkitallowfullscreen
+              mozallowfullscreen
+              allowfullscreen
+            ></iframe>
+            <p>
+              <a href="https://vimeo.com/36579366"
+                >Bret Victor - Inventing on Principle</a
+              >
+              from <a href="https://vimeo.com/cusec">CUSEC</a> on
+              <a href="https://vimeo.com">Vimeo</a>.
+            </p>
+          </section>
+          <section>
+            <iframe
+              width="891"
+              height="501"
+              src="https://www.youtube.com/embed/b2l4zTS8lPg"
+              frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h1>目标</h1>
+            <ul>
+              <li>提高效率，避免浪费时间</li>
+              <li>做一个小工具</li>
+              <li>做一个小应用</li>
+              <li>哪个应用不好用，做个更好用的</li>
+              <li>获得10个以上的用户</li>
+              <li>获得200个以上的用户</li>
+            </ul>
+          </section>
+          <section>
+            <p>没动力了怎么办？</p>
+            <p class="fragment">兴趣是最好的老师</p>
+          </section>
+          <section>
+            <p>没时间去学？</p>
+            <p class="fragment">碎片时间学习</p>
+            <p class="fragment">大脑有自动导航模式和手动挡模式，自动挡就是习惯性的daily routine，手动挡就是不按套路出牌，违背routine。</p>
+          </section>
+          <section>
+            <p>看文档看得很厌烦了怎么办？</p>
+            <p class="fragment">洗个澡,喝杯自己喜欢的饮料，然后放一些白噪声，开始看文档</p>
+            <p class="fragment">去跑步或者健身的时候，想一下文档里理解的内容和看不懂的内容，越思考越好奇，就会去看文档了</p>
+            <p class="fragment">身体状况和精神状况会影响学习</p>
+          </section>
+        </section>
+        <section>
+          <section>
+              <h1>TIPS</h1>
+          </section>
+          <section>
+            <ul>
+              <li class="fragment">打断点 优于 console输出</li>
+              <li class="fragment">善用搜索工具，和官方文档</li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/WebRTC_API">WebRTC_API MDN文档</a>
         </section>
         <section>
           <h1>Thanks</h1>
